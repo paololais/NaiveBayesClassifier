@@ -1,7 +1,6 @@
 import pandas as pd
 from NaiveBayes import NaiveBayes
 from LaplaceSmoothing import LaplaceSmoothing
-import time
 
 def get_num_levels(df):
     num_levels = []
