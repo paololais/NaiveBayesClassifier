@@ -1,4 +1,18 @@
-import numpy as np 
+import numpy as np
+
+"""
+Laplace smoothing:
+Suppose you have random variable x taking values in { 1, 2, ..., v } (v possible discrete values). 
+What is the probability of observing a specific value i ?
+We perform N experiments and value i occurs ni times.
+With Laplace smoothing, the probability of observing value i is given by:
+P(x=i|c)= (n[i]+a) / (N+a*v)
+
+ a = 1. 
+ a > 1 means "I trust my prior belief more than the data"
+ a < 1 which means "I trust my prior belief less than the data"
+
+""" 
 
 class  LaplaceSmoothing:
 

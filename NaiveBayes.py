@@ -77,7 +77,7 @@ class  NaiveBayes:
 
 
 	def predict(self, X):
-		""" Calculates Posterior probability P(c|x) """
+		""" Calculates Posterior probability P(c|x) = P(x|c) * P(c) """
 		results = []
 		X = np.array(X)
   
