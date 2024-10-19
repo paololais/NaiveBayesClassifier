@@ -108,7 +108,8 @@ class  LaplaceSmoothing:
                 posterior = (likelihood * prior)
                 probs_outcome[outcome] = posterior
             
-            result = max(probs_outcome, key = lambda x: probs_outcome[x])
-            results.append(result)
+            if not skip_pattern:    
+                result = max(probs_outcome, key = lambda x: probs_outcome[x])
+                results.append(result)
 
         return np.array(results)
