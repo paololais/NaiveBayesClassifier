@@ -65,9 +65,10 @@ if __name__=='__main__':
    
     # Calculate accuracy on the test set
     test_accuracy = accuracy_score(y_test, predictions)
+    error_rate = 100-test_accuracy
 
     # Print results
-    print(f"Test Accuracy: {test_accuracy}%")
+    print(f"Error rate: {error_rate}%")
     
     
     ########################################################################################
@@ -88,6 +89,7 @@ if __name__=='__main__':
    
     # Calculate accuracy on the test set
     test_accuracy = accuracy_score(y_test, predictions)
+    error_rate = 100-test_accuracy
 
     # Print results
-    print(f"Test Accuracy: {test_accuracy}%")
+    print(f"Error rate: {error_rate}%")
