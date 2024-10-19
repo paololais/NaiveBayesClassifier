@@ -2,7 +2,9 @@ import pandas as pd
 from NaiveBayes import NaiveBayes
 from LaplaceSmoothing import LaplaceSmoothing
 
-#returns a list with the number of possible distinct values (levels) for each column
+# For Laplace Smoothing:
+# In the data preparation step, add the information about the number of levels. 
+# This means that for each data column you should add the number of possible different values for that column.
 def get_num_levels(df):
     num_levels = []
     for col in df.columns[:-1]:

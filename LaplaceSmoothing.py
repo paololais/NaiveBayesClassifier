@@ -73,6 +73,13 @@ class  LaplaceSmoothing:
             outcome_count = sum(self.y_train == outcome)
             self.class_priors[outcome] = outcome_count / self.train_size
 
+    #When you compute probabilities, you introduce Laplace smoothing in your formulas 
+    # by adding some terms that take into account your prior belief. 
+    # Since you don't know anything, your prior belief is that all values are equally probable. 
+    # In this case, Laplace smoothing gives probability = 1/2 (for binary variables) 
+    # or more generally probability = 1/v (for variables with v possible values). 
+    # This is why the number of possible values must be known (modification 1).
+
     def _calc_likelihoods(self, a=1):
         """ P(x|c) - Likelihood """
 
